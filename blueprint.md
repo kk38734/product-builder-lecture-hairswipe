@@ -7,12 +7,13 @@ HairSwipe is a modern, framework-less web application that provides personalized
 - **Dynamic Recommendations:** Filters a library of hairstyles based on user preferences.
 - **Web Components:** Uses custom elements for encapsulated UI (e.g., `<hairstyle-card>`).
 - **Responsive Design:** Mobile-first approach using CSS Grid and modern layouts.
-- **Dark Mode / Light Mode:** **New!** Includes a theme toggle with persistence using `localStorage`.
+- **Dark Mode / Light Mode:** Includes a theme toggle with persistence using `localStorage`.
+- **Affiliate Inquiry Form:** **New!** A simple partnership inquiry form integrated with Formspree for backend processing.
 - **Modern CSS:** Utilizes CSS variables, transitions, and polished shadows for a premium feel.
 
 ## Project Structure
-- `index.html`: Main structure and theme toggle UI.
-- `style.css`: Modern styling with CSS variables for light and dark themes.
+- `index.html`: Main structure, theme toggle UI, and inquiry form.
+- `style.css`: Modern styling with CSS variables for light and dark themes, including form input styling.
 - `main.js`: Core logic for recommendations, Web Component definition, and theme management.
 
 ## Current Status
@@ -20,4 +21,5 @@ HairSwipe is a modern, framework-less web application that provides personalized
 - [x] Style the Website (Modern & Responsive)
 - [x] Implement Recommendation Logic
 - [x] Add Dark Mode / Light Mode toggle
+- [x] Add Affiliate Inquiry form (Formspree)
 - [x] Push to GitHub for Cloudflare deployment
