@@ -1,14 +1,53 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairstyle Recommender</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Find Your Perfect Hairstyle</h1>
+    </header>
+    <main>
+        <form id="hairstyle-form">
+            <h2>Tell us about your hair:</h2>
+            <div class="form-group">
+                <label for="face-shape">What is your face shape?</label>
+                <select id="face-shape" name="face-shape">
+                    <option value="oval">Oval</option>
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                    <option value="heart">Heart</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hair-type">What is your hair type?</label>
+                <select id="hair-type" name="hair-type">
+                    <option value="straight">Straight</option>
+                    <option value="wavy">Wavy</option>
+                    <option value="curly">Curly</option>
+                    <option value="coily">Coily</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hair-length">What is your hair length?</label>
+                <select id="hair-length" name="hair-length">
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <section id="recommendations">
+            <h2>Our Recommendations</h2>
+            <div id="recommendations-container"></div>
+        </section>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
