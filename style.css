@@ -133,10 +133,18 @@ button[type="submit"]:hover {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 20px var(--shadow-color);
+    margin-bottom: 40px;
 }
 
 #affiliate-inquiry p {
     margin-bottom: 20px;
+}
+
+#comments {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 input[type="text"],
