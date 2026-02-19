@@ -10,7 +10,10 @@ class HairstyleCard extends HTMLElement {
                 .card {
                     border-radius: 10px;
                     overflow: hidden;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                    box-shadow: 0 5px 15px var(--shadow-color, rgba(0,0,0,0.1));
+                    background-color: var(--card-bg-color, #fff);
+                    color: var(--text-color, #333);
+                    transition: all 0.3s ease;
                 }
                 img {
                     width: 100%;
@@ -38,6 +41,28 @@ class HairstyleCard extends HTMLElement {
 }
 
 customElements.define('hairstyle-card', HairstyleCard);
+
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-theme');
+    themeToggle.textContent = 'Light Mode';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    let theme = 'light';
+    if (body.classList.contains('dark-theme')) {
+        theme = 'dark';
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
+    }
+    localStorage.setItem('theme', theme);
+});
 
 const hairstyles = [
     {
